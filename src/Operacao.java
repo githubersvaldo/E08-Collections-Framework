@@ -71,13 +71,14 @@ public abstract class Operacao implements ITaxas {
         if(tipo == 'd' || tipo == 's')
             this.tipo = tipo;
     }
-
+    //compara as operação com o tipo de operação como referencia
     public static class TipoComparator2 implements Comparator<Operacao> {
         @Override
         public int compare(Operacao o1, Operacao o2) {
             return Integer.compare(o1.tipo, o2.tipo);
         }
     }
+    //compara as operação com a data da operação como referencia
     public static class TipoComparator implements Comparator<Operacao> {
         @Override
         public int compare(Operacao o1, Operacao o2) {
